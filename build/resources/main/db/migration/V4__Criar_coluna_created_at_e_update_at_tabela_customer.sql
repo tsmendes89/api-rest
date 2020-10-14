@@ -1,0 +1,1 @@
+ALTER TABLE `customer` ADD `created_at` DATETIME NULL DEFAULT NULL AFTER `gender`, ADD `update_at` DATETIME NULL DEFAULT NULL AFTER `created_at`;

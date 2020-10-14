@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id "org.flywaydb.flyway" version "7.0.2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.sparkjava:spark-core:2.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile group: 'com.google.inject', name: 'guice', version: '4.0'
+    compile group: 'org.jdbi', name: 'jdbi3-core', version: '3.1.0'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
+    //implementation 'mysql:mysql-connector-java:8.0.12'
+}
+
+flyway {
+   url = 'jdbc:mysql://localhost:3306/rest'
+   user = 'root'
+}
