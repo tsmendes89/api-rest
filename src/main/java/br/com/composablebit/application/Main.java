@@ -23,7 +23,7 @@ public class Main {
         CustomerServiceImpl customerServiceImpl = injector.getInstance(CustomerServiceImpl.class);
         ConnectionImpl connectionImpl = injector.getInstance(ConnectionImpl.class);
         Jdbi jdbi = connectionImpl.connectToDatabase();
-        //port(8080);
+        port(8080);
 
         post("/customers", (req, res) -> {
             try {
